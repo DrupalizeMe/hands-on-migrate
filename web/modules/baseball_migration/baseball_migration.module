@@ -1,0 +1,12 @@
+<?php
+/**
+* Implements hook_uninstall().
+*/
+function baseball_migration_uninstall() {
+  db_query("DELETE FROM {config} WHERE name LIKE 'migrate_plus.migration.appearance%'");
+  db_query("DELETE FROM {config} WHERE name LIKE 'migrate_plus.migration.baseball_%'");
+  db_query("DELETE FROM {config} WHERE name LIKE 'migrate_plus.migration_group.baseball%'");
+  db_query("DELETE FROM {config} WHERE name LIKE 'migrate_plus.migration.player_award%'");
+
+  drupal_flush_all_caches();
+}

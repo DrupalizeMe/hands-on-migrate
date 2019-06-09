@@ -1,0 +1,9 @@
+name: Baseball Migration
+type: module
+description: Example custom migration imports from MySQL database of baseball stats.
+core: 8.x
+package: Custom
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_tools
